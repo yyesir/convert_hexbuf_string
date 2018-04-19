@@ -1,5 +1,5 @@
 //string 转 HexBuf and HexBuf 转string
-var CharToHex = function(x){
+function CharToHex(x){
 	switch(x){
 		case 10 : return 'a';
 		case 11 : return 'b';
@@ -10,7 +10,7 @@ var CharToHex = function(x){
 	}
 }
 
-var HexToChar = function(x){
+function HexToChar(x){
 	switch(x){
 		case 'a' : return 10;
 		case 'b' : return 11;
@@ -21,7 +21,7 @@ var HexToChar = function(x){
 	}
 }
 
-var Data2CharA = function(ucData) {
+function Data2CharA(ucData) {
 	if ( ucData >= 0 && ucData <= 9 ) {
 		return ucData.toString(16);
 	} else if ( ucData >= 10 && ucData <= 15 ) {
@@ -29,7 +29,7 @@ var Data2CharA = function(ucData) {
     }
 }
 
-var str2hexA = function(str){
+function str2hexA(str){
 	var val = "";
 	var ucData,ucHexHigh,ucHexLow;
 	for (var i = 0; i < str.length; i++) {
@@ -42,7 +42,7 @@ var str2hexA = function(str){
 	return val;
 }
 
-var hexA2str = function(str){
+function hexA2str(str){
 	var uTotalLen = str.length;
 	var uLenEat = 0;
 	var cHexData;
